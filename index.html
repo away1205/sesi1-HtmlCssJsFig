@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="assets/book-4986.svg" type="image/x-icon">
+
+  <!-- Remixicon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+
+    <nav class="nav">
+      <ul>
+        <a href="#">Home</a>
+        <a href="#">Books</a>
+        <a href="#">Contact</a>
+      </ul>
+    </nav>
+
+    <div class="nav__title">
+      <h1>Book</h1>
+      <a href="#"><i class="ri-bookmark-fill"></i></a>
+      <h1>Shelf</h1>
+    </div>
+
+    <form action="/search" class="form__cari" id="form-cari">
+      <label for="cari-buku" class="cari-buku-label"><i class="ri-search-line"></i></label>
+
+      <div class="search__wrapper">
+      <input type="text" placeholder="CARI JUDUL BUKU" id="cari-buku">
+      <button type="submit" class="search__button"><i class="ri-arrow-right-line"></i></button>
+      </div>
+    </form>
+  </header>
+
+  <main class="main">
+    <form action="/slash" class="buku__masuk" id="buku-masuk">
+      <h2 class="form__title">Masukkan Buku Baru</h2>
+
+      <div class="judul__buku">
+        <input type="text" placeholder="Judul Buku" name="judul-buku" id="judul-buku" required>
+      </div>
+
+      <div class="info__buku">
+        <input type="text" placeholder="Penulis" name="penulis" id="penulis-buku" required>
+        <input type="number" placeholder="Tahun" name="tahun" id="tahun-buku" required>
+      </div>
+
+      <div class="btn__container">
+        <button class="input__buku" id="input-buku">Masukkan Buku Ke Rak</button>
+      </div>
+
+      <!-- Belum Dibaca -->
+      <section class="belum__dibaca-section">
+        <h2 class="form__title" id="belum-title">Belum Dibaca</h2>
+
+        <div class="belum__selesai-list" id="belum-selesai-judul">
+          <div class="dropdown" id="dropdown-judul">
+            <p class="selesai__info judul__fw" id="belum-judul">Judul</p>
+            <i class="ri-arrow-down-circle-line show__button"></i>
+          </div>
+          <div class="drop__container">
+            <div class="dropdown__info">
+              <div class="info__container">
+                <p class="selesai__info" id="belum-penulis">Penulis</p>
+                <p class="selesai__info" id="belum-tahun">Tahun</p>
+              </div>
+              <div class="dropdown__button">
+                <span class="edit__button"><i class="ri-check-line check" id="check"></i></span>
+                <span class="edit__button"><i class="ri-edit-2-line edit"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selesai Dibaca -->
+      <section class="selesai__dibaca-section">
+        <h2 class="form__title" id="sudah-title">Selesai Dibaca</h2>
+
+        <div class="sudah__selesai-list" id="sudah-selesai-judul">
+          <div class="dropdown">
+            <p class="selesai__info" id="belum-judul">Judul</p>
+            <i class="ri-arrow-down-circle-line"></i>
+          </div>
+          <div class="drop__container">
+            <div class="dropdown__info">
+              <div class="info__container">
+                <p class="selesai__info" id="belum-penulis">Penulis</p>
+                <p class="selesai__info" id="belum-tahun">Tahun</p>
+              </div>
+              <div class="dropdown__button">
+                <span class="edit__button"><i class="ri-close-line delete" id="delete"></i></span>
+                <span class="edit__button"><i class="ri-edit-2-line edit"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+
+    <!-- illustration -->
+    <section class="animasi">
+      <img src="assets/Saly-16.svg" alt="" class="illustration">
+      <div class="circle"></div>
+    </section>
+  </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+          <h1 class="footer__title">Bookshelf</h1>
+          <p>App to store your book online</p>
+
+          <ul class="footer__list">
+              <li>
+                  <a href="#home" class="footer__link">Home</a>
+              </li>
+
+              <li>
+                  <a href="#skills" class="footer__link">Books</a>
+              </li>
+
+              <li>
+                  <a href="#projects" class="footer__link">Contacts</a>
+              </li>
+          </ul>
+
+          <span class="footer__copy">
+              &#169; Copright Agwam AA Khomaeini. All rights reserved
+          </span>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
